@@ -1,29 +1,35 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 # Laravel User Authentication and CRUD System
-This is a simple web application that allows users to register and login using PHP and MySQL. The application uses HTML, CSS and Bootstrap for the front-end design, and XAMPP for the local server environment.
+This is a simple admin dashboard application that showcases CRUD operations using React and Laravel. Users can login or sign up with a new account, view users, update details or delete users.
 
 ## Features
 * User registration form with basic validation
 * User login form with session management
-* User profile page with account details
-* User logout script
+* User admin page with showcasing other users and details
+* CRUD operations, allowing users to create, update and delete existing users
   
 ## Requirements
 * PHP 8.0 or higher
-* MySQL 8.0 or higher
-* XAMPP 8.0 or higher
+* Node.Js
+* Install Composer
   
 ## Installation
 To install and run this application on your local machine, follow these steps:
 
-* Download and install XAMPP from here.
-* Start the Apache and MySQL modules from the XAMPP Control Panel.
-* Create a database named auth. You can use the SQLcode found in 'db.sql'.
-
-* Download or clone this repository from GitHub and copy the files to the htdocs folder of your XAMPP installation directory (e.g., C:\xampp\htdocs).
-* Edit the dbh.classes.php file and change the database credentials according to your MySQL server setting.
-* Open your web browser and go to http://localhost to access the application.
+* Download the project (or clone using GIT)
+* Copy .env.example into .env and configure database credentials
+* Navigate to the project's root directory using terminal
+* Run composer install
+  
+* Set the encryption key by executing php artisan key:generate --ansi
+* Run migrations php artisan migrate --seed
+* Start local server by executing php artisan serve
+  
+* Open new terminal and navigate to the react folder
+* Copy react/.env.example into .env and adjust the VITE_API_BASE_URL parameter
+* Run npm install
+* Run npm run dev to start vite server for React
   
 ## Usage
-To use this application, you can either register a new account or login with an existing one. The default username and password for testing are 'user' and 'pass'.
+To use this application, you can either register a new account or login with an existing one. The default email and password for testing are 'user@email.com' and 'password123!'.
